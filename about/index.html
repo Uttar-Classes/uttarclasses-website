@@ -3,22 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>About Uttar Classes | Vadodara Tuition Classes</title>
+
   <meta name="description" content="Learn about Uttar Classes, our teaching philosophy, personal attention, regular tests and result-focused preparation.">
   <meta name="keywords" content="Uttar Classes, tuition classes Vadodara, CBSE GSEB tuition, JEE NEET GUJCET coaching">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.uttarclasses.in/about/">
+
   <meta property="og:title" content="About Uttar Classes | Vadodara Tuition Classes">
   <meta property="og:description" content="Learn about Uttar Classes, our teaching philosophy, personal attention, regular tests and result-focused preparation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.uttarclasses.in/about/">
   <meta property="og:site_name" content="Uttar Classes">
+
   <link rel="preload" href="/assets/images/logo.jpeg" as="image">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    .about-faculty-showcase {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+      gap: 42px;
+      align-items: center;
+      margin-bottom: 34px;
+    }
+
+    .about-photo-carousel {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 12px 30px rgba(15, 61, 94, 0.08);
+    }
+
+    .about-photo-carousel input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .about-carousel-window {
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+
+    .about-carousel-track {
+      display: flex;
+      width: 300%;
+      transition: transform 0.35s ease;
+    }
+
+    .about-carousel-slide {
+      flex: 0 0 33.3333%;
+      width: 33.3333%;
+    }
+
+    .about-carousel-slide img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--soft);
+    }
+
+    #about-slide-1:checked ~ .about-carousel-window .about-carousel-track {
+      transform: translateX(0);
+    }
+
+    #about-slide-2:checked ~ .about-carousel-window .about-carousel-track {
+      transform: translateX(-33.3333%);
+    }
+
+    #about-slide-3:checked ~ .about-carousel-window .about-carousel-track {
+      transform: translateX(-66.6666%);
+    }
+
+    .about-carousel-dots {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      z-index: 2;
+    }
+
+    .about-carousel-dots label {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      background: rgba(255, 255, 255, 0.55);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    }
+
+    #about-slide-1:checked ~ .about-carousel-dots label[for="about-slide-1"],
+    #about-slide-2:checked ~ .about-carousel-dots label[for="about-slide-2"],
+    #about-slide-3:checked ~ .about-carousel-dots label[for="about-slide-3"] {
+      background: var(--accent);
+    }
+
+    .faculty-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 920px) {
+      .about-faculty-showcase {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
+
       <a class="logo" href="/" aria-label="Uttar Classes Home">
         <img src="/assets/images/logo.jpeg" alt="Uttar Classes Vadodara logo" width="120" height="80">
       </a>
@@ -30,20 +134,22 @@
       </button>
 
       <nav class="site-nav" id="siteNav" aria-label="Main navigation">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/class-9-10/">Class 9-10</a>
-          <a class="nav-link" href="/class-11-12-science/">Class 11-12 Science</a>
-          <a class="nav-link" href="/jee-neet-gujcet-coaching/">JEE/NEET/GUJCET</a>
-          <a class="nav-link" href="/subhanpura-tuition-classes/">Subhanpura</a>
-          <a class="nav-link" href="/bhayli-tuition-classes/">Bhayli</a>
-          <a class="nav-link" href="/results/">Results</a>
-          <a class="nav-link active" href="/about/">About</a>
-          <a class="nav-link" href="/contact/">Contact</a>
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/class-9-10/">Class 9-10</a>
+        <a class="nav-link" href="/class-11-12-science/">Class 11-12 Science</a>
+        <a class="nav-link" href="/jee-neet-gujcet-coaching/">JEE/NEET/GUJCET</a>
+        <a class="nav-link" href="/subhanpura-tuition-classes/">Subhanpura</a>
+        <a class="nav-link" href="/bhayli-tuition-classes/">Bhayli</a>
+        <a class="nav-link" href="/results/">Results</a>
+        <a class="nav-link active" href="/about/">About</a>
+        <a class="nav-link" href="/contact/">Contact</a>
       </nav>
+
     </div>
   </header>
 
   <main>
+
     <section class="page-hero">
       <div class="container narrow">
         <span class="eyebrow">About Us</span>
@@ -54,11 +160,13 @@
 
     <section class="section">
       <div class="container split-grid">
+
         <div>
           <h2>Our teaching philosophy</h2>
           <p>Students perform better when concepts are clear, doubts are solved quickly, practice is regular and parents are updated honestly.</p>
           <p>Our system combines classroom teaching, notes, topic-wise practice, tests and personal improvement guidance.</p>
         </div>
+
         <aside class="info-card">
           <h3>Core focus</h3>
           <ul class="check-list compact">
@@ -68,46 +176,93 @@
             <li>Regular tests and feedback</li>
           </ul>
         </aside>
+
       </div>
     </section>
 
     <section class="section section-soft">
       <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">Faculty</span>
-          <h2>Guidance by experienced subject mentors</h2>
-          <p>Science subjects are handled with a strong focus on fundamentals, numerical practice and exam-level preparation.</p>
+
+        <div class="about-faculty-showcase">
+
+          <div class="about-photo-carousel" aria-label="Uttar Classes faculty and classroom photo carousel">
+            <input type="radio" name="aboutCarousel" id="about-slide-1" checked>
+            <input type="radio" name="aboutCarousel" id="about-slide-2">
+            <input type="radio" name="aboutCarousel" id="about-slide-3">
+
+            <div class="about-carousel-window">
+              <div class="about-carousel-track">
+
+                <figure class="about-carousel-slide">
+                  <img src="/assets/images/about/faculty-1.jpg" alt="Uttar Classes faculty mentoring students in class" width="900" height="506">
+                </figure>
+
+                <figure class="about-carousel-slide">
+                  <img src="/assets/images/about/faculty-2.jpg" alt="Uttar Classes classroom learning environment" width="900" height="506">
+                </figure>
+
+                <figure class="about-carousel-slide">
+                  <img src="/assets/images/about/faculty-3.jpg" alt="Uttar Classes students receiving concept-based guidance" width="900" height="506">
+                </figure>
+
+              </div>
+            </div>
+
+            <div class="about-carousel-dots" aria-label="Carousel controls">
+              <label for="about-slide-1" aria-label="Show first photo"></label>
+              <label for="about-slide-2" aria-label="Show second photo"></label>
+              <label for="about-slide-3" aria-label="Show third photo"></label>
+            </div>
+          </div>
+
+          <div class="faculty-text">
+            <span class="eyebrow">Faculty</span>
+            <h2>Guidance by experienced subject mentors</h2>
+            <p>Physics and Chemistry are handled with a strong focus on fundamentals, numerical practice and exam-level preparation.</p>
+            <p><strong>Marutendra Pratap Singh</strong> guides students in Physics and Chemistry with online and offline teaching experience.</p>
+          </div>
+
         </div>
+
         <div class="card-grid two">
+
           <article class="feature-card">
             <h3>Concept-first teaching</h3>
             <p>Every topic starts from the basics before moving to board-level and entrance-level questions.</p>
           </article>
+
           <article class="feature-card">
             <h3>Regular feedback</h3>
             <p>Tests and parent updates help students understand where they are improving and what needs more practice.</p>
           </article>
+
         </div>
+
       </div>
     </section>
 
     <section class="cta-band">
       <div class="container cta-band-inner">
+
         <div>
           <span class="eyebrow light">Admissions Open</span>
           <h2>Book a free counselling call for the right batch.</h2>
           <p>Discuss the board, subjects, current level and target exam. We will suggest the best study path.</p>
         </div>
+
         <div class="cta-actions">
           <a class="btn btn-light" href="tel:+918840199491">Call Now</a>
           <a class="btn btn-outline-light" href="https://wa.me/918840199491?text=Hello%20Uttar%20Classes%2C%20I%20want%20admission%20details." target="_blank" rel="noopener">WhatsApp Enquiry</a>
         </div>
+
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
+
       <div>
         <h3>Uttar Classes</h3>
         <p>CBSE and GSEB tuition for Class 9-12 Science with concept clarity, regular tests, personal attention and exam-focused preparation.</p>
@@ -126,6 +281,7 @@
         <a href="mailto:uttartuitionclasses@gmail.com">uttartuitionclasses@gmail.com</a>
         <a href="https://wa.me/918840199491?text=Hello%20Uttar%20Classes%2C%20I%20want%20admission%20details." target="_blank" rel="noopener">WhatsApp Admission Enquiry</a>
       </div>
+
     </div>
 
     <div class="footer-bottom">
@@ -134,6 +290,8 @@
   </footer>
 
   <a class="floating-whatsapp" href="https://wa.me/918840199491?text=Hello%20Uttar%20Classes%2C%20I%20want%20admission%20details." target="_blank" rel="noopener" aria-label="Chat with Uttar Classes on WhatsApp">WhatsApp</a>
+
   <script src="/assets/js/main.js" defer></script>
+
 </body>
 </html>
